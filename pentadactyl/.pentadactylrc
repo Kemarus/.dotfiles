@@ -1,0 +1,11 @@
+"hg7166
+loadplugins '\.(js|penta)$'
+group user
+set cdpath=''
+set guioptions=bCrsBT
+
+" vim: set ft=pentadactyl:
+set defsearch=duckduckgo
+imap -builtin ,, <Esc>
+cmap -builtin ,, <Esc>
+source .pentadactylrc.bepo

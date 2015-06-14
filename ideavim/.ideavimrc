@@ -1,0 +1,6 @@
+source ~/.vimrc
+noremap <Space>o :action Run<CR>
+noremap <Space>è :action RunClass<CR>
+noremap <Space>x :action CommentByLineComment<CR>
+noremap <Space>w :action SaveAll<CR>
+
