@@ -1,4 +1,6 @@
+# Add user bin directory from cabal and pip
 PATH=${PATH}:${HOME}/.cabal/bin
+PATH=${PATH}:${HOME}/.local/bin
 
 # General aliases
 # alias ll='ls -l'
