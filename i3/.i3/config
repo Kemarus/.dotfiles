@@ -48,12 +48,6 @@ bindsym $mod+s focus down
 bindsym $mod+r focus up
 bindsym $mod+n focus right
 
-# alternatively, you can use the cursor keys:
-#bindsym $mod+Left focus left
-#bindsym $mod+Down focus down
-#bindsym $mod+Up focus up
-#bindsym $mod+Right focus right
-
 # move focused window
 bindsym $mod+Shift+T move left
 bindsym $mod+Shift+S move down
@@ -93,32 +87,28 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+quotedbl workspace 1
-bindsym $mod+guillemotleft workspace 2
-bindsym $mod+guillemotright workspace 3
-bindsym $mod+parenleft workspace 4
-bindsym $mod+parenright workspace 5
-bindsym $mod+at workspace 6
-bindsym $mod+plus workspace 7
-bindsym $mod+minus workspace 8
-bindsym $mod+slash workspace 9
-bindsym $mod+asterisk workspace 10
-# bindsym $mod+equal workspace 11
-# bindsym $mod+percent workspace 12
+bindsym $mod+quotedbl workspace 1:一
+bindsym $mod+guillemotleft workspace 2:二
+bindsym $mod+guillemotright workspace 3:三
+bindsym $mod+parenleft workspace 4:四
+bindsym $mod+parenright workspace 5:五
+bindsym $mod+at workspace 6:六
+bindsym $mod+plus workspace 7:七
+bindsym $mod+minus workspace 8:八
+bindsym $mod+slash workspace 9:九
+bindsym $mod+asterisk workspace 10:十
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+guillemotleft move container to workspace 2
-bindsym $mod+Shift+guillemotright move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-# bindsym $mod+Shift+degree move container to workspace 11
-# bindsym $mod+Shift+grave move container to workspace 12
+bindsym $mod+Shift+1 move container to workspace 1:一
+bindsym $mod+Shift+guillemotleft move container to workspace 2:二
+bindsym $mod+Shift+guillemotright move container to workspace 3:三
+bindsym $mod+Shift+4 move container to workspace 4:四
+bindsym $mod+Shift+5 move container to workspace 5:五
+bindsym $mod+Shift+6 move container to workspace 6:六
+bindsym $mod+Shift+7 move container to workspace 7:七
+bindsym $mod+Shift+8 move container to workspace 8:八
+bindsym $mod+Shift+9 move container to workspace 9:九
+bindsym $mod+Shift+0 move container to workspace 10:十
 
 # reload the configuration file
 bindsym $mod+Shift+X reload
@@ -157,11 +147,12 @@ bindsym $mod+o mode "resize"
 # finds out, if available)
 bar {
         status_command i3blocks
-        # status_command python ~/.i3/config.py
         font pango:Inconsolata LGC, FontAwesome 9
 
         # Show tray icons on primary monitor
         tray_output primary
+
+        strip_workspace_numbers yes
 
         mode hide
         # hidden_state show
@@ -171,8 +162,10 @@ colors  {
 #       background #333333
         background #2b2b2b
 #       thing you're changing   border background text
-        focused_workspace  #5a647e #5a647e #e6e1dc
-        active_workspace   #2b2b2b #b6b3eb #e6e1dc
+        #focused_workspace  #5a647e #5a647e #e6e1dc
+        focused_workspace  #5a647e #464646 #ff7f00
+        #active_workspace   #2b2b2b #b6b3eb #e6e1dc
+        active_workspace   #2b2b2b #464646 #e6e1dc
         inactive_workspace #2b2b2b  #2b2b2b #e6e1dc
         urgent_workspace   #3a4055 #da4939 #f9f7f3
         }
@@ -184,7 +177,7 @@ exec --no-startup-id feh --bg-fill /mnt/kevin/System/Wallpaper/Astronomy/black_a
 exec --no-startup-id numlockx
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset r rate 200 30
-exec --no-startup-id dunst
+#exec --no-startup-id dunst
 
 # Keyboard shortcuts
 bindsym $mod+Escape exec xfce4-taskmanager
@@ -224,13 +217,13 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 # for_window [class="Steam" title="Friends"] floating enable
 
-assign [class="Skype"] 10
-# assign [class="Vlc"] 7
-assign [title="mpv - -"] 7
-assign [class="FTL"] 2
-assign [class="SuperMeatBoy"] 2
-assign [class="Wine"] 2
-assign [class="explorer.exe"] 2
+assign [class="Skype"] 10:十
+# assign [class="Vlc"] 7:七
+assign [title="mpv - -"] 7:七
+assign [class="FTL"] 2:二
+assign [class="SuperMeatBoy"] 2:二
+assign [class="Wine"] 2:二
+assign [class="explorer.exe"] 2:二
 
 # Window Borders
 new_window pixel 1
