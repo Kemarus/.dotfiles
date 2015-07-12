@@ -22,6 +22,7 @@ PATH=${PATH}:${HOME}/.local/bin
 alias pacro="sudo pacman -Rns $(pacman -Qtdq)"
 alias aurin="sudo aura -A"
 alias aurupg="sudo aura -Au"
+alias yaoupg="yaourt -Sbu --aur"
 
 alias st="subl3"
 alias sst="sudo subl3"
