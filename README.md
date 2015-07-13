@@ -16,9 +16,6 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 ### ect*
 - `vconsole.conf`: defines the keyboard layout in the console to `fr-bepo`.
 
-### flash_player*
-- `adobe/mms.cfg`: activates hardware acceleration (Nvidia only?).
-
 ### gtk2
 - `.gtkrc-2.0`: sets the theme and font for GTK+ 2 applications. Contains a fix for gVim (dark solarized theme).
 
@@ -72,7 +69,6 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 
 ### X11*
 - `X11/xorg.conf.d/00-keyboard.conf`: keyboard config file for Xorg. Changes layout to `fr-bepo`, remaps caps lock to backspace and modifies keyboard rate.
-- `X11/xorg.conf.d/20-nvidia.conf`: config file for monitors. Sets monitors positions and add VSync.
 - `X11/xorg.conf.d/50-mouse-acceleration.conf`: config file for the mouse. Deactivates mouse acceleration.
 
 ### zsh
