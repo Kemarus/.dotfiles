@@ -13,6 +13,9 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 ## Description
 
 
+### dunst
+- `.config/dunst/dunstrc`: config file for dunst (a notification daemon).
+
 ### ect*
 - `vconsole.conf`: defines the keyboard layout in the console to `fr-bepo`.
 
