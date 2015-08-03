@@ -20,18 +20,6 @@ set $ws10 10:十
 # Font
 font pango:Inconsolata LGC 9
 
-# Workspace settings
-workspace $ws1 output DVI-I-1
-workspace $ws2 output DVI-I-1
-workspace $ws3 output DVI-I-1
-workspace $ws4 output DVI-I-1
-workspace $ws5 output DVI-I-1
-workspace $ws6 output DVI-D-0
-workspace $ws7 output DVI-D-0
-workspace $ws8 output DVI-D-0
-workspace $ws9 output DVI-D-0
-workspace $ws10 output DVI-D-0
-
 # Mouse
 mouse_warping none
 
@@ -118,7 +106,7 @@ bindsym $mod+Shift+Right move right
 bindsym $mod+Shift+b kill
 bindsym $mod+Shift+P reload
 bindsym $mod+Shift+O restart
-bindsym $mod+Shift+dead_circumflex exit
+bindsym $mod+Shift+eacute exit
 
 # Borders
 bindsym $mod+l border none
@@ -215,7 +203,6 @@ bindsym $mod+dollar bar mode toggle
 # App settings
 #######################################################################
 # Startup
-exec --no-startup-id feh --bg-fill /mnt/kevin/System/Wallpaper/Astronomy/black_and_white_space.jpg
 exec --no-startup-id numlockx
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset r rate 200 30
@@ -223,9 +210,6 @@ exec --no-startup-id dunst
 
 # Borders
 for_window [class="MPlayer"] border none
-for_window [class="SuperMeatBoy"] border none
-for_window [class="FTL"] border none, floating disable
-for_window [class="SuperMeatBoy"] border none, floating disable
 
 for_window [title="mpv - -"] border none
 
@@ -234,9 +218,4 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 
 # Window assignments
-assign [class="FTL"] $ws2
-assign [class="SuperMeatBoy"] $ws2
-assign [class="Wine"] $ws2
-assign [class="explorer.exe"] $ws2
-assign [title="mpv - -"] $ws7
 assign [class="Skype"] $ws10
