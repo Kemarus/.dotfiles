@@ -11,6 +11,17 @@
 
 set $mod Mod4
 
+set $ws1 一
+set $ws2 二
+set $ws3 三
+set $ws4 四
+set $ws5 五
+set $ws6 六
+set $ws7 七
+set $ws8 八
+set $ws9 九
+set $ws10 十
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -87,28 +98,28 @@ bindsym $mod+a focus parent
 bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+quotedbl workspace 1:一
-bindsym $mod+guillemotleft workspace 2:二
-bindsym $mod+guillemotright workspace 3:三
-bindsym $mod+parenleft workspace 4:四
-bindsym $mod+parenright workspace 5:五
-bindsym $mod+at workspace 6:六
-bindsym $mod+plus workspace 7:七
-bindsym $mod+minus workspace 8:八
-bindsym $mod+slash workspace 9:九
-bindsym $mod+asterisk workspace 10:十
+bindsym $mod+quotedbl workspace $ws1
+bindsym $mod+guillemotleft workspace $ws2
+bindsym $mod+guillemotright workspace $ws3
+bindsym $mod+parenleft workspace $ws4
+bindsym $mod+parenright workspace $ws5
+bindsym $mod+at workspace $ws6
+bindsym $mod+plus workspace $ws7
+bindsym $mod+minus workspace $ws8
+bindsym $mod+slash workspace $ws9
+bindsym $mod+asterisk workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1:一
-bindsym $mod+Shift+guillemotleft move container to workspace 2:二
-bindsym $mod+Shift+guillemotright move container to workspace 3:三
-bindsym $mod+Shift+4 move container to workspace 4:四
-bindsym $mod+Shift+5 move container to workspace 5:五
-bindsym $mod+Shift+6 move container to workspace 6:六
-bindsym $mod+Shift+7 move container to workspace 7:七
-bindsym $mod+Shift+8 move container to workspace 8:八
-bindsym $mod+Shift+9 move container to workspace 9:九
-bindsym $mod+Shift+0 move container to workspace 10:十
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+guillemotleft move container to workspace $ws2
+bindsym $mod+Shift+guillemotright move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 
 # reload the configuration file
 bindsym $mod+Shift+X reload
@@ -217,29 +228,29 @@ for_window [window_role="task_dialog"] floating enable
 for_window [window_role="Preferences"] floating enable
 # for_window [class="Steam" title="Friends"] floating enable
 
-assign [class="Skype"] 10:十
-# assign [class="Vlc"] 7:七
-assign [title="mpv - -"] 7:七
-assign [class="FTL"] 2:二
-assign [class="SuperMeatBoy"] 2:二
-assign [class="Wine"] 2:二
-assign [class="explorer.exe"] 2:二
+assign [class="Skype"] $ws10
+# assign [class="Vlc"] $ws7
+assign [title="mpv - -"] $ws7
+assign [class="FTL"] $ws2
+assign [class="SuperMeatBoy"] $ws2
+assign [class="Wine"] $ws2
+assign [class="explorer.exe"] $ws2
 
 # Window Borders
 new_window pixel 1
 hide_edge_borders both
 
 # Putting workspaces on specific screen
-workspace 1 output DVI-I-1
-workspace 2 output DVI-I-1
-workspace 3 output DVI-I-1
-workspace 4 output DVI-I-1
-workspace 5 output DVI-I-1
-workspace 6 output DVI-D-0
-workspace 7 output DVI-D-0
-workspace 8 output DVI-D-0
-workspace 9 output DVI-D-0
-workspace 10 output DVI-D-0
+workspace $ws1 output DVI-I-1
+workspace $ws2 output DVI-I-1
+workspace $ws3 output DVI-I-1
+workspace $ws4 output DVI-I-1
+workspace $ws5 output DVI-I-1
+workspace $ws6 output DVI-D-0
+workspace $ws7 output DVI-D-0
+workspace $ws8 output DVI-D-0
+workspace $ws9 output DVI-D-0
+workspace $ws10 output DVI-D-0
 
 # Mouse settings
 # focus_follows_mouse no
