@@ -31,6 +31,8 @@ alias khdd="cd /mnt/kevin"
 alias lhdd="cd /mnt/LinuxHDD"
 alias ram="cd /mnt/RAMDisk"
 
+alias backup="cd ~/Projects/Backup && ./backup.sh"
+
 alias pidr="pip install -r dev-requirements.txt"
 alias pipin3="pip3 install --user"
 alias pipout3="pip3 list --outdated"
