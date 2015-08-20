@@ -55,7 +55,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Launchers and terminal
 bindsym $mod+Return exec --no-startup-id urxvt
-bindsym $mod+b exec --no-startup-id quickswitch.py
+bindsym $mod+b exec --no-startup-id rofi -show window -font "Inconsolata LGC 14" -lines 5
 bindsym $mod+eacute exec --no-startup-id rofi -show run -font "Inconsolata LGC 14" -lines 5
 bindsym $mod+p exec --no-startup-id j4-dmenu-desktop
 
