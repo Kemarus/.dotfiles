@@ -46,9 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git virtualenv virtualenvwrapper python django archlinux common-aliases dirhistory pip web-search node npm meteor)
-plugins=(git virtualenvwrapper archlinux common-aliases pip meteor)
-#plugins=(git common-aliases dirhistory web-search)
-
+plugins=(git archlinux common-aliases)
 
 # User configuration
 
