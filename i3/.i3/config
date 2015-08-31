@@ -76,6 +76,7 @@ bindsym $mod+a layout tabbed
 bindsym $mod+u layout stacking
 bindsym $mod+i layout toggle split
 bindsym $mod+e fullscreen
+bindsym $mod+Shift+e fullscreen global
 
 bindsym $mod+agrave split h
 bindsym $mod+y split v
