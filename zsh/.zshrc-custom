@@ -33,6 +33,17 @@ alias ram="cd /mnt/RAMDisk"
 
 alias backup="cd ~/Projects/Backup && ./backup.sh"
 
+pulseaudio_fix() {
+    sudo sed -i 's/load-module module-udev-detect/load-module module-udev-detect tsched=0/' /etc/pulse/default.pa
+    pulseaudio -k
+    pulseaudio --start
+}
+pulseaudio_fix_undo() {
+    sudo sed -i 's/load-module module-udev-detect tsched=0/load-module module-udev-detect/' /etc/pulse/default.pa
+    pulseaudio -k
+    pulseaudio --start
+}
+
 alias pidr="pip install -r dev-requirements.txt"
 alias pipin3="pip3 install --user"
 alias pipout3="pip3 list --outdated"
