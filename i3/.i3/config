@@ -152,7 +152,7 @@ bindsym $mod+F7 exec --no-startup-id chromium --disk-cache-dir=/tmp/chromium
 bindsym $mod+F8 exec --no-startup-id chromium --incognito --disk-cache-dir=/tmp/chromium
 
 # Keyboard rate and layouts
-bindsym $mod+Shift+F8 xset r rate 200 30
+bindsym $mod+Shift+F8 exec xset r rate 200 30
 bindsym $mod+Shift+F9 exec --no-startup-id setxkbmap -model pc105 -layout fr && pkill -RTMIN+1 i3blocks
 bindsym $mod+Shift+F10 exec --no-startup-id setxkbmap -model pc105 -layout fr -variant bepo && pkill -RTMIN+1 i3blocks
 bindsym $mod+Shift+F11 exec --no-startup-id setxkbmap -model pc105 -layout us && pkill -RTMIN+1 i3blocks
