@@ -23,6 +23,10 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'maksimr/vim-jsbeautify'
 " Python
 NeoBundle 'davidhalter/jedi-vim'
+" Haskell
+NeoBundle 'neovimhaskell/haskell-vim'
+NeoBundle 'eagletmt/ghcmod-vim'
+NeoBundle 'eagletmt/neco-ghc'
 " LaTeX
 NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
 " Git
@@ -39,6 +43,15 @@ NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 
 call neobundle#end()
 
@@ -130,6 +143,7 @@ nnoremap <Leader>ç :vertical resize<CR>
 " Misc {{{
 set nocompatible " Make sure Vim is not in compatible mode
 set backspace=indent,eol,start " Normal backspace behavior
+let $PATH = $PATH . ':' . expand('~/.cabal/bin') " Add cabal binaries directory to Vim PATH
 source ~/.vimrc.bepo " Load bépo mappings
 " }}}
 " Airline {{{
@@ -158,6 +172,9 @@ let g:gundo_map_move_newer = "s"
 " }}}
 " jedi {{{
 let g:jedi#rename_command = "<Leader>o"
+" }}}
+" neco-ghc {{{
+let g:necoghc_enable_detailed_browse = 1 " Show functions type information
 " }}}
 " NERD Commenter {{{
 let g:NERDCreateDefaultMappings = 0 " Don't create default mappings
