@@ -64,6 +64,11 @@ alias gkl="livestreamer dailymotion.com/embed/video/x13533w"
 export EDITOR="vim"
 export BROWSER="firefox"
 
+# ibus exports
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
 # Options
 #set -o clobber
 #[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
