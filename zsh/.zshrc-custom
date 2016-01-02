@@ -80,6 +80,11 @@ export BROWSER="firefox"
 # Vagrant default directory
 export VAGRANT_HOME=/mnt/LinuxHDD/.vagrant.d
 
+# ibus exports
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
 # Options
 #set -o clobber
 #[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
