@@ -77,6 +77,9 @@ alias gkl="livestreamer dailymotion.com/embed/video/x13533w"
 export EDITOR="vim"
 export BROWSER="firefox"
 
+# Vagrant default directory
+export VAGRANT_HOME=/mnt/LinuxHDD/.vagrant.d
+
 # Options
 #set -o clobber
 #[[ -n "${key[Up]}"      ]] && bindkey  "${key[Up]}"      history-beginning-search-backward
