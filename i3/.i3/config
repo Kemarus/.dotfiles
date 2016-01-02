@@ -145,7 +145,7 @@ bindsym $mod+Escape exec gnome-system-monitor
 bindsym $mod+F1 exec subl3
 bindsym $mod+F2 exec nemo --no-desktop
 bindsym $mod+F3 exec --no-startup-id urxvt -e ranger
-bindsym $mod+F4 exec --no-startup-id keepassx
+bindsym $mod+F4 exec --no-startup-id keepassx2
 bindsym $mod+F5 exec thunderbird
 bindsym $mod+F6 exec firefox --private-window
 bindsym $mod+F7 exec --no-startup-id chromium --disk-cache-dir=/tmp/chromium
@@ -227,6 +227,7 @@ exec --no-startup-id dunst
 for_window [class="MPlayer"] border none
 for_window [class="SuperMeatBoy"] border none
 for_window [class="FTL"] border none, floating disable
+for_window [title="MiniMetro"] border none, floating disable
 for_window [class="SuperMeatBoy"] border none, floating disable
 
 for_window [title="- - mpv"] border none
@@ -237,6 +238,7 @@ for_window [window_role="Preferences"] floating enable
 
 # Window assignments
 assign [class="FTL"] $ws2
+assign [title="MiniMetro"] $ws2
 assign [class="SuperMeatBoy"] $ws2
 assign [class="Wine"] $ws2
 assign [class="explorer.exe"] $ws2
