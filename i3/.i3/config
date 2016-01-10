@@ -133,7 +133,7 @@ bindsym $mod+Escape exec gnome-system-monitor
 bindsym $mod+F1 exec subl3
 bindsym $mod+F2 exec nemo --no-desktop
 bindsym $mod+F3 exec --no-startup-id urxvt -e ranger
-bindsym $mod+F4 exec --no-startup-id keepassx
+bindsym $mod+F4 exec --no-startup-id keepassx2
 bindsym $mod+F5 exec thunderbird
 bindsym $mod+F6 exec firefox --private-window
 bindsym $mod+F7 exec --no-startup-id chromium --disk-cache-dir=/tmp/chromium
