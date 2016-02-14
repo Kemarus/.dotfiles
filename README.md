@@ -1,7 +1,7 @@
 # dotfiles
 
 ## Introduction
-My configuration files are organized by application. I use [GNU Stow](1) to symlink the files and [Arch Linux](2).  
+My configuration files are organized by application. I use [GNU Stow](1) to symlink the files.  
 <strong>Warning</strong>: I use the keyboard layout `fr-bepo`. You may need to modify these files in order to use them with another layout.
 
 ## Installation
@@ -13,51 +13,15 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 ## Description
 
 
-### dunst
-- `.config/dunst/dunstrc`: config file for dunst (a notification daemon).
-
-### ect*
-- `vconsole.conf`: defines the keyboard layout in the console to `fr-bepo`.
-
-### flash_player*
-- `adobe/mms.cfg`: activates hardware acceleration (Nvidia only?).
-
 ### gtk2
 - `.gtkrc-2.0`: sets the theme and font for GTK+ 2 applications. Contains a fix for gVim (dark solarized theme).
-
-### gtk3
-- `.config/gtk-3.0/gtk.css`: removes the window shadow (for i3).
-- `.config/gtk-3.0/settings.ini`: sets the theme and font for GTK+ 3 applications.
 
 ### ideavim
 - `.ideavimrc`: config file for IdeaVim (PyCharm, WebStorm). Reads ~/.vimrc and add some specific remaps.
 
-### i3
-- `.i3blocks.conf`: config file for i3blocks (an i3 status line).
-- `.i3/config`: config file for i3. 
-- `.i3/scripts/`: various scripts for i3.
-
-### lightdm**
-- Files must be copied to `/etc/lightdm/`. Symbolic link not supported.
-- `lightdm/lightdm-gtk-greeter.conf`: config file for LightDM (GTK+ greeter).
-
-### livestreamer
-- `.config/livestreamer/config`: config file for livestreamer.
-- `.config/livestreamer/config.dailymotion`: config file for Dailymotion.com website.
-- `.config/livestreamer/config.twitch`: config file for Twitch.tv website.
-
-### mplayer
-- `.mplayer/config`: config file for mplayer.
-
-### pacman*
-- `pacman.conf`: config file for pacman.
-
 ### pentadactyl
 - `.pentadactylrc`: config file for Pentadactyl.
 - `.pentadactylrc.bepo`: remaping for `fr-bepo` layout.
-
-### pynote
-- `.noterc`: config file for pynote.
 
 ### ranger
 - `.config/ranger/commands.py`: contains ranger's commands. 
@@ -73,14 +37,8 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 - `.xinitrc`: used to execute programs when starting X server. I don't use it for now (I use a display manager, LightDM).
 - `.Xresources`: defines settings for urxvt.
 
-### X11*
-- `X11/xorg.conf.d/00-keyboard.conf`: keyboard config file for Xorg. Changes layout to `fr-bepo`, remaps caps lock to backspace and modifies keyboard rate.
-- `X11/xorg.conf.d/20-nvidia.conf`: config file for monitors. Sets monitors positions and add VSync.
-- `X11/xorg.conf.d/50-mouse-acceleration.conf`: config file for the mouse. Deactivates mouse acceleration.
-
 ### zsh
 - `.zshrc`: base config file for (oh-my-)zsh.
 - `.zshrc-custom`: custom config file with functions and aliases.
 
 [1]: https://www.gnu.org/software/stow/
-[2]: https://www.archlinux.org/
