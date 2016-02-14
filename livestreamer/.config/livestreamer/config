@@ -1,4 +1,0 @@
-player=mpv --cache 4196
-default-stream best
-#retry-streams 30
-retry-open 5

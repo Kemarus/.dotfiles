@@ -1,8 +1,0 @@
-#!/bin/bash
-
-gmail=$(python ~/.accounts/gmail_unread.py)
-
-# if [ $gmail -gt 0 ]; then
-#     echo "$gmail"
-# fi
-echo "$gmail"
