@@ -66,6 +66,9 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 - `.vimrc`: config file for vim.
 - `.vimrc.bepo`: remaping for `fr-bepo` layout.
 
+### virtualbox*
+- `modules-load.d/virtualbox.conf`: config file for loading Virtualbox kernel modules at boot time
+
 ### Xorg
 - `.xinitrc`: used to execute programs when starting X server. I don't use it for now (I use a display manager, LightDM).
 - `.Xresources`: defines settings for urxvt.
