@@ -195,6 +195,7 @@ set omnifunc=syntaxcomplete#Complete
 nnoremap <Leader>n :NERDTreeToggle<CR>
 " }}}
 " Tagbar {{{
+nnoremap <Leader>m :TagbarToggle<CR>
 let g:tagbar_type_elixir = {
     \ 'ctagstype' : 'elixir',
     \ 'kinds' : [
