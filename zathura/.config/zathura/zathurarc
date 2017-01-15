@@ -1,0 +1,105 @@
+" Normal mode
+map [normal] T scroll full-down
+map [normal] S scroll full-up
+map [normal] c scroll left
+map [normal] t scroll down
+map [normal] s scroll up
+map [normal] r scroll right
+map [normal] <C-i> scroll half-down
+map [normal] <C-v> scroll half-up
+map [normal] ,, goto top
+map [normal] ; goto bottom
+map [normal] C scroll page-top
+map [normal] R scroll page-bottom
+map [normal] u adjust_window width
+map [normal] f focus_inputbar /
+map [normal] F focus_inputbar ?
+map [normal] \' search forward
+map [normal] ? search backward
+map [normal] l focus_inputbar :open
+map [normal] e follow
+map [normal] E display_link
+map [normal] N focus_inputbar :
+map [normal] o rotate rotate_cw
+map [normal] <C-l> reload
+map [normal] i toggle_page_mode
+map [normal] <C-q> toggle_inputbar
+map [normal] <C-\'> toggle_statusbar
+unmap [normal] q
+map [normal] b quit
+map [normal] q mark_add
+map [normal] m mark_evaluate
+
+" Fullscreen mode
+map [fullscreen] T scroll full-down
+map [fullscreen] S scroll full-up
+map [fullscreen] c scroll left
+map [fullscreen] t scroll down
+map [fullscreen] s scroll up
+map [fullscreen] r scroll right
+map [fullscreen] <C-i> scroll half-down
+map [fullscreen] <C-v> scroll half-up
+map [fullscreen] ,, goto top
+map [fullscreen] ; goto bottom
+map [fullscreen] C scroll page-top
+map [fullscreen] R scroll page-bottom
+map [fullscreen] u adjust_window width
+map [fullscreen] f focus_inputbar /
+map [fullscreen] F focus_inputbar ?
+map [fullscreen] \' search forward
+map [fullscreen] ? search backward
+map [fullscreen] l focus_inputbar :open
+map [fullscreen] e follow
+map [fullscreen] E display_link
+map [fullscreen] N focus_inputbar :
+map [fullscreen] o rotate rotate_cw
+map [fullscreen] <C-l> reload
+map [fullscreen] i toggle_page_mode
+map [fullscreen] <C-q> toggle_inputbar
+map [fullscreen] <C-\'> toggle_statusbar
+unmap [fullscreen] q
+map [fullscreen] b quit
+map [fullscreen] q mark_add
+map [fullscreen] m mark_evaluate
+
+" Presentation mode
+map [presentation] T scroll full-down
+map [presentation] S scroll full-up
+map [presentation] c scroll left
+map [presentation] t scroll down
+map [presentation] s scroll up
+map [presentation] r scroll right
+map [presentation] <C-i> scroll half-down
+map [presentation] <C-v> scroll half-up
+map [presentation] ,, goto top
+map [presentation] ; goto bottom
+map [presentation] C scroll page-top
+map [presentation] R scroll page-bottom
+map [presentation] u adjust_window width
+map [presentation] f focus_inputbar /
+map [presentation] F focus_inputbar ?
+map [presentation] \' search forward
+map [presentation] ? search backward
+map [presentation] l focus_inputbar :open
+map [presentation] e follow
+map [presentation] E display_link
+map [presentation] N focus_inputbar :
+map [presentation] o rotate rotate_cw
+map [presentation] <C-l> reload
+map [presentation] i toggle_page_mode
+map [presentation] <C-q> toggle_inputbar
+map [presentation] <C-\'> toggle_statusbar
+unmap [presentation] q
+map [presentation] b quit
+map [presentation] q mark_add
+map [presentation] m mark_evaluate
+
+" Index mode
+unmap [index] q
+map [index] b quit
+map [index] t navigate_index down
+map [index] s navigate_index up
+map [index] r navigate_index expand
+map [index] c navigate_index collapse
+map [index] R navigate_index expand-all
+map [index] C navigate_index collapse-all
