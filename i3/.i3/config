@@ -219,7 +219,7 @@ bindsym $mod+dollar bar mode toggle
 # App settings
 #######################################################################
 # Startup
-exec --no-startup-id feh --bg-scale /mnt/kevin/System/Wallpaper/Astronomy/black_and_white_space.jpg
+exec --no-startup-id feh --bg-scale /mnt/kevin/files/Pictures/Wallpapers/Astronomy/black_and_white_space.jpg
 exec --no-startup-id numlockx
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset r rate 200 30
