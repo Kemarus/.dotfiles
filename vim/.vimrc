@@ -40,7 +40,6 @@ call dein#add('ctrlpvim/ctrlp.vim')
 call dein#add('sjl/gundo.vim')
 call dein#add('airblade/vim-gitgutter') " Display a git diff in the gutter
 call dein#add('majutsushi/tagbar')
-call dein#add('tpope/vim-surround')
 call dein#add('easymotion/vim-easymotion')
 
 call dein#end()
