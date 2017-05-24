@@ -231,6 +231,7 @@ let g:syntastic_check_on_wq = 0
 
 let g:syntastic_enable_elixir_checker = 1
 let g:syntastic_elixir_checkers = ["elixir"]
+let g:syntastic_elixir_elixir_exe = 'elixirc'
 
 let g:syntastic_elm_checkers = ["elm_make"]
 let g:elm_syntastic_show_warnings = 1
