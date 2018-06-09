@@ -45,39 +45,58 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(archlinux common-aliases docker docker-compose git pip vim-interaction virtualenv virtualenvwrapper)
+plugins=(common-aliases git)
 
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl"
-# export MANPATH="/usr/local/man:$MANPATH"
+PATH=${PATH}:${HOME}/.local/bin  # Add user bin directory from pip
 
+export HISTSIZE=50000
+SAVEHIST=$HISTSIZE
+setopt hist_ignore_all_dups  # Delete old recorded entry if new entry is a duplicate.
+setopt hist_ignore_space  # Don't record an entry starting with a space.
+
+export BROWSER="firefox"
+export EDITOR=nvim
+
+alias sagi="sudo apt install"
+alias saupd="sudo apt update"
+alias saupg="sudo apt upgrade"
+alias sadupg="sudo apt dist-upgrade"
+alias zshrcc="vim ~/.zshrc-custom && source ~/.zshrc-custom"
+
+alias pipin3="pip3 install --user"
+alias pipout3="pip3 list --outdated"
+pipupg3() {
+    list=($(pip3 list --outdated | awk '{print $1}'))
+    for package in "${list[@]}"; do
+        pip3 install --user --upgrade $package
+    done
+}
+alias pipin2="pip2 install --user"
+alias pipout2="pip2 list --outdated"
+pipupg2() {
+    list=($(pip2 list --outdated | awk '{print $1}'))
+    for package in "${list[@]}"; do
+        pip2 install --user --upgrade $package
+    done
+}
+
+pulseaudio_fix() {
+    sudo sed -i 's/load-module module-udev-detect/load-module module-udev-detect tsched=0/' /etc/pulse/default.pa
+    pulseaudio -k
+    pulseaudio --start
+}
+pulseaudio_fix_undo() {
+    sudo sed -i 's/load-module module-udev-detect tsched=0/load-module module-udev-detect/' /etc/pulse/default.pa
+    pulseaudio -k
+    pulseaudio --start
+}
+
+
+if [[ -f "$HOME/.zshrc-custom" ]]; then
+    source ~/.zshrc-custom
+fi
 source $ZSH/oh-my-zsh.sh
-source ~/.zshrc-custom
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
