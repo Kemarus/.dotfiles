@@ -68,7 +68,6 @@ set shiftwidth=4 "Number of spaces for each step of indent
 " UI {{{
 set number " Show line numbers
 set showcmd " Show command in bottom bar
-set cursorline " Highlight current line
 set wildmenu " Visual autocomplete for command menu
 "set lazyredraw " Redraw only when it's needed
 set showmatch " Highligh matching [{()}]
