@@ -5,59 +5,52 @@ if has('vim_starting')
     set nocompatible
   endif
 
-  set runtimepath+=/home/$USER/.vim/bundle/neobundle.vim/
+  set runtimepath+=/home/$USER/.vim/repos/github.com/Shougo/dein.vim
 endif
 
-call neobundle#begin(expand('/home/$USER/.vim/bundle'))
+call dein#begin(expand('/home/$USER/.vim'))
 
-
-NeoBundleFetch 'Shougo/neobundle.vim' " Let NeoBundle manage NeoBundle
+call dein#add('Shougo/dein.vim') " Let dein manage dein
 
 " Colors
-NeoBundle 'altercation/vim-colors-solarized'
+call dein#add('altercation/vim-colors-solarized')
 " UI
-NeoBundle 'bling/vim-airline'
-" JavaScript
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'maksimr/vim-jsbeautify'
-" Python
-NeoBundle 'davidhalter/jedi-vim'
-" Haskell
-NeoBundle 'neovimhaskell/haskell-vim'
-NeoBundle 'eagletmt/ghcmod-vim'
-NeoBundle 'eagletmt/neco-ghc'
+call dein#add('bling/vim-airline')
+" Elixir
+call dein#add('elixir-lang/vim-elixir')
+call dein#add('slashmili/alchemist.vim')
+" Elm
+call dein#add('ElmCast/elm-vim')
 " LaTeX
-NeoBundle 'LaTeX-Box-Team/LaTeX-Box'
+call dein#add('lervag/vimtex')
 " Git
-NeoBundle 'tpope/vim-fugitive'
+call dein#add('tpope/vim-fugitive')
 " Markdown
-NeoBundle 'suan/vim-instant-markdown'
+call dein#add('suan/vim-instant-markdown')
 " Completion
-NeoBundle 'Shougo/neocomplete.vim'
+call dein#add('Shougo/deoplete.nvim')
 " Syntax checking
-NeoBundle 'scrooloose/syntastic'
+call dein#add('vim-syntastic/syntastic')
 " Misc
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'scrooloose/nerdcommenter'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
+call dein#add('Raimondi/delimitMate')
+call dein#add('scrooloose/nerdtree')
+call dein#add('Xuyuanp/nerdtree-git-plugin')
+call dein#add('scrooloose/nerdcommenter')
+call dein#add('ctrlpvim/ctrlp.vim')
+call dein#add('sjl/gundo.vim')
+call dein#add('airblade/vim-gitgutter') " Display a git diff in the gutter
+call dein#add('majutsushi/tagbar')
+call dein#add('easymotion/vim-easymotion')
 
-call neobundle#end()
+call dein#end()
 
 filetype plugin indent on " Load filetype-specific indent files
 
-NeoBundleCheck " Prompt on startup if uninstalled bundles are found
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+    call dein#install()
+endif
+
 " }}}
 " Colors {{{
 syntax enable " Enable syntax processing
@@ -75,7 +68,6 @@ set shiftwidth=4 "Number of spaces for each step of indent
 " UI {{{
 set number " Show line numbers
 set showcmd " Show command in bottom bar
-set cursorline " Highlight current line
 set wildmenu " Visual autocomplete for command menu
 "set lazyredraw " Redraw only when it's needed
 set showmatch " Highligh matching [{()}]
@@ -118,6 +110,11 @@ autocmd GUIEnter * set visualbell t_vb= " Stop gVim from flashing
 " Mappings {{{
 imap ,, <Esc>
 " }}}
+" Neovim {{{
+if has('nvim')
+    tnoremap ,, <C-\><C-n>
+endif
+" }}}
 " Leader Shortcuts {{{
 let mapleader = "\<Space>" "Map leader key to the space key
 
@@ -145,6 +142,7 @@ set nocompatible " Make sure Vim is not in compatible mode
 set backspace=indent,eol,start " Normal backspace behavior
 let $PATH = $PATH . ':' . expand('~/.cabal/bin') " Add cabal binaries directory to Vim PATH
 source ~/.vimrc.bepo " Load bépo mappings
+set updatetime=250
 " }}}
 " Airline {{{
 set laststatus=2 " Always show the status line
@@ -170,12 +168,6 @@ nnoremap <Leader>v :GundoToggle<CR>
 let g:gundo_map_move_older = "t"
 let g:gundo_map_move_newer = "s"
 " }}}
-" jedi {{{
-let g:jedi#rename_command = "<Leader>o"
-" }}}
-" neco-ghc {{{
-let g:necoghc_enable_detailed_browse = 1 " Show functions type information
-" }}}
 " NERD Commenter {{{
 let g:NERDCreateDefaultMappings = 0 " Don't create default mappings
 " Mappings
@@ -193,10 +185,53 @@ map <Leader>dl <plug>NERDCommenterAlignLeft
 map <Leader>db <plug>NERDCommenterAlignBoth
 map <Leader>du <plug>NERDCommenterUncomment
 " }}}
-" NeoComplete {{{
-let g:neocomplete#enable_at_startup = 1 " Enable NeoComplete at startup
-let g:neocomplete#enable_smart_case = 1 " Use smartcase
+" Deoplete {{{
+let g:deoplete#enable_at_startup = 1 " Enable deoplete at startup
+let g:deoplete#enable_smart_case = 1 " Use smartcase
+set omnifunc=syntaxcomplete#Complete
+" }}}
+" NERDTree {{{
+nnoremap <Leader>n :NERDTreeToggle<CR>
+" }}}
+" Tagbar {{{
+nnoremap <Leader>m :TagbarToggle<CR>
+let g:tagbar_type_elixir = {
+    \ 'ctagstype' : 'elixir',
+    \ 'kinds' : [
+        \ 'f:functions',
+        \ 'functions:functions',
+        \ 'c:callbacks',
+        \ 'd:delegates',
+        \ 'e:exceptions',
+        \ 'i:implementations',
+        \ 'a:macros',
+        \ 'o:operators',
+        \ 'm:modules',
+        \ 'p:protocols',
+        \ 'r:records'
+    \ ]
+\ }
+" }}}
+" Alchemist {{{
+let g:alchemist#elixir_erlang_src = "/usr/local/share/src"
+" }}}
+" Elm {{{
+let g:elm_setup_keybindings = 0 " Disable Elm default mappings
 " }}}
 " Syntastic {{{
-let g:syntastic_ignore_files = ['\.py$'] " Ignore .py* files
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_enable_elixir_checker = 1
+let g:syntastic_elixir_checkers = ["elixir"]
+let g:syntastic_elixir_elixir_exe = 'elixirc'
+
+let g:syntastic_elm_checkers = ["elm_make"]
+let g:elm_syntastic_show_warnings = 1
 " }}}
