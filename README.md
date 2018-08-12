@@ -22,6 +22,9 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 ### flash_player*
 - `adobe/mms.cfg`: activates hardware acceleration (Nvidia only?).
 
+### git
+- `.gitconfig : config file for git aliases
+
 ### gtk2
 - `.gtkrc-2.0`: sets the theme and font for GTK+ 2 applications. Contains a fix for gVim (dark solarized theme).
 
