@@ -66,7 +66,8 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
 # Launchers and terminal
-bindsym $mod+Return exec --no-startup-id urxvt
+bindsym $mod+Return exec --no-startup-id alacritty
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --command tmux
 bindsym $mod+b exec --no-startup-id rofi -show window -font "Inconsolata LGC 14" -lines 5
 bindsym $mod+eacute exec --no-startup-id rofi -show run -font "Inconsolata LGC 14" -lines 5
 bindsym $mod+p exec --no-startup-id j4-dmenu-desktop
@@ -144,7 +145,7 @@ bindsym $mod+f exec --no-startup-id amixer set Master 1%+ && pkill -RTMIN+10 i3b
 bindsym $mod+Escape exec gnome-system-monitor
 bindsym $mod+F1 exec subl3
 bindsym $mod+F2 exec nemo --no-desktop
-bindsym $mod+F3 exec --no-startup-id EDITOR=nvim urxvt -e ranger
+bindsym $mod+F3 exec --no-startup-id EDITOR=nvim alacritty --command ranger
 bindsym $mod+F4 exec --no-startup-id keepassxc
 bindsym $mod+F5 exec thunderbird
 bindsym $mod+F6 exec firefox --private-window
