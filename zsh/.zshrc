@@ -66,6 +66,11 @@ alias saupg="sudo apt upgrade"
 alias sadupg="sudo apt dist-upgrade"
 alias zshrcc="vim ~/.zshrc-custom && source ~/.zshrc-custom"
 
+alias karf="kubectl apply --record=true --filename"
+alias kgj="kubectl get jobs"
+alias kgjwide="kubectl get jobs --output wide"
+alias kgnowide="kubectl get nodes --output wide"
+
 alias pipin3="pip3 install --user"
 alias pipout3="pip3 list --outdated"
 pipupg3() {
