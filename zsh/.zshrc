@@ -105,6 +105,7 @@ if [[ -f "$HOME/.zshrc-custom" ]]; then
     source ~/.zshrc-custom
 fi
 source $ZSH/oh-my-zsh.sh
+PROMPT='$(kube_ps1)'$PROMPT
 if [[ -f "$HOME/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
     source ~/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
