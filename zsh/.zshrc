@@ -108,3 +108,6 @@ source $ZSH/oh-my-zsh.sh
 if [[ -f "$HOME/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
     source ~/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# fd is an alias for the find command set in the common-aliases plugin but it breaks program called fd (an alternative to find written in Rust)
+unalias fd
