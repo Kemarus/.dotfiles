@@ -65,6 +65,7 @@ alias saupd="sudo apt update"
 alias saupg="sudo apt upgrade"
 alias sadupg="sudo apt dist-upgrade"
 alias zshrcc="vim ~/.zshrc-custom && source ~/.zshrc-custom"
+alias e="exa --long --binary"
 
 alias karf="kubectl apply --record=true --filename"
 alias kgj="kubectl get jobs"
