@@ -141,6 +141,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+ && pkill
 bindsym $mod+XF86AudioRaiseVolume exec --no-startup-id amixer set Master 1%+ && pkill -RTMIN+10 i3blocks
 bindsym $mod+f exec --no-startup-id amixer set Master 1%+ && pkill -RTMIN+10 i3blocks
 
+bindsym $mod+x exec --no-startup-id amixer set Master 14% && pkill -RTMIN+10 i3blocks
+bindsym $mod+period exec --no-startup-id amixer set Master 100% && pkill -RTMIN+10 i3blocks
+
 # Apps
 bindsym $mod+Escape exec gnome-system-monitor
 bindsym $mod+F1 exec subl3
