@@ -83,7 +83,7 @@ if has("gui_running")
   set guioptions-=r " Hide right-hand scroll bar
   set guioptions-=L " Hide left-hand scroll bar
   set guioptions-=m " Hide menu bar
-  set guifont=Source\ Code\ Pro\ for\ Powerline\ Semi-Bold\ 10
+  set guifont=JetBrains\ Mono\ 11
   set background=dark
   colorscheme solarized
 endif
