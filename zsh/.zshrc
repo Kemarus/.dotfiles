@@ -59,6 +59,7 @@ setopt hist_ignore_space  # Don't record an entry starting with a space.
 
 export BROWSER="firefox"
 export EDITOR=nvim
+export TF_PLUGIN_CACHE_DIR="$HOME/.terraform.d/plugin-cache"
 
 alias sagi="sudo apt install"
 alias saupd="sudo apt update"
