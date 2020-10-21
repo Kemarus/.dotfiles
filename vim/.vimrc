@@ -16,21 +16,8 @@ call dein#add('Shougo/dein.vim') " Let dein manage dein
 call dein#add('altercation/vim-colors-solarized')
 " UI
 call dein#add('bling/vim-airline')
-" Elixir
-call dein#add('elixir-lang/vim-elixir')
-call dein#add('slashmili/alchemist.vim')
-" Elm
-call dein#add('ElmCast/elm-vim')
-" LaTeX
-call dein#add('lervag/vimtex')
-" Git
-call dein#add('tpope/vim-fugitive')
-" Markdown
-call dein#add('suan/vim-instant-markdown')
 " Completion
 call dein#add('Shougo/deoplete.nvim')
-" Syntax checking
-call dein#add('vim-syntastic/syntastic')
 " Misc
 call dein#add('Raimondi/delimitMate')
 call dein#add('scrooloose/nerdtree')
