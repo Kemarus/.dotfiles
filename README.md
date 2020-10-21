@@ -19,9 +19,6 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 ### ect*
 - `vconsole.conf`: defines the keyboard layout in the console to `fr-bepo`.
 
-### flash_player*
-- `adobe/mms.cfg`: activates hardware acceleration (Nvidia only?).
-
 ### git
 - `.gitconfig : config file for git aliases
 
@@ -71,10 +68,6 @@ My configuration files are organized by application. I use [GNU Stow](1) to syml
 ### vim
 - `.vimrc`: config file for vim.
 - `.vimrc.bepo`: remaping for `fr-bepo` layout.
-
-### Xorg
-- `.xinitrc`: used to execute programs when starting X server. I don't use it for now (I use a display manager, LightDM).
-- `.Xresources`: defines settings for urxvt.
 
 ### X11*
 - `X11/xorg.conf.d/00-keyboard.conf`: keyboard config file for Xorg. Changes layout to `fr-bepo`, remaps caps lock to backspace and modifies keyboard rate.
