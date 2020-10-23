@@ -150,10 +150,11 @@ bindsym $mod+F1 exec subl3
 bindsym $mod+F2 exec nemo --no-desktop
 bindsym $mod+F3 exec --no-startup-id EDITOR=nvim alacritty --command ranger
 bindsym $mod+F4 exec --no-startup-id keepassxc
-bindsym $mod+F5 exec thunderbird
+bindsym $mod+F5 exec thunderbird -P default
 bindsym $mod+F6 exec firefox --private-window
 bindsym $mod+F7 exec --no-startup-id chromium --disk-cache-dir=/tmp/chromium
 bindsym $mod+F8 exec --no-startup-id chromium --incognito --disk-cache-dir=/tmp/chromium
+bindsym $mod+F9 exec thunderbird -P pro
 
 # Keyboard rate and layouts
 bindsym $mod+Shift+F5 exec --no-startup-id ibus engine xkb:fr:bepo:fra
