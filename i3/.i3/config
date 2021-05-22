@@ -3,16 +3,16 @@
 #######################################################################
 set $mod Mod4
 
-set $ws1 1:一
-set $ws2 2:二
-set $ws3 3:三
-set $ws4 4:四
-set $ws5 5:五
-set $ws6 6:六
-set $ws7 7:七
-set $ws8 8:八
-set $ws9 9:九
-set $ws10 10:十
+set $ws1 1:1
+set $ws2 2:2
+set $ws3 3:3
+set $ws4 4:4
+set $ws5 5:5
+set $ws6 6:6
+set $ws7 7:7
+set $ws8 8:8
+set $ws9 9:9
+set $ws10 10:10
 
 #######################################################################
 # Settings
@@ -146,7 +146,7 @@ bindsym $mod+period exec --no-startup-id amixer set Master 100% && pkill -RTMIN+
 
 # Apps
 bindsym $mod+Escape exec gnome-system-monitor
-bindsym $mod+F1 exec subl3
+bindsym $mod+F1 exec subl
 bindsym $mod+F2 exec nemo --no-desktop
 bindsym $mod+F3 exec --no-startup-id EDITOR=nvim alacritty --command ranger
 bindsym $mod+F4 exec --no-startup-id keepassxc
@@ -224,19 +224,13 @@ bindsym $mod+dollar bar mode toggle
 # App settings
 #######################################################################
 # Startup
-exec --no-startup-id feh --bg-scale ~/Pictures/black_and_white_space.jpg
 exec --no-startup-id numlockx
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset r rate 200 30
 exec --no-startup-id dunst
 
 # Borders
-for_window [class="MPlayer"] border none
-for_window [class="SuperMeatBoy"] border none
 for_window [class="FTL"] border none, floating disable
-for_window [title="MiniMetro"] border none, floating disable
-for_window [class="SuperMeatBoy"] border none, floating disable
-
 for_window [title="- - mpv"] border none
 
 for_window [window_role="pop-up"] floating enable
