@@ -109,3 +109,10 @@ source $ZSH/oh-my-zsh.sh
 if [[ -f "$HOME/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
     source ~/.dotfiles/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
+
+# Add current Kubernetes context in prompt if kube-ps1 plugin is enabled.
+# It's not possible to simply change the PROMPT variable inside ~/.zshrc-custom.
+# Something must happen when zsh syntax highlighting is sourced that overrides the prompt value.
+if [[ "${plugins[@]}" =~ "kube-ps1" ]]; then
+    PROMPT='$(kube_ps1)'$PROMPT
+fi
