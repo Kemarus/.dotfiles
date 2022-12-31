@@ -155,6 +155,7 @@ bindsym $mod+F6 exec firefox --private-window
 bindsym $mod+F7 exec --no-startup-id chromium --disk-cache-dir=/tmp/chromium
 bindsym $mod+F8 exec --no-startup-id chromium --incognito --disk-cache-dir=/tmp/chromium
 bindsym $mod+F9 exec thunderbird -P pro
+bindsym $mod+F10 exec firefox -P Pro --private-window
 
 # Keyboard rate and layouts
 bindsym $mod+Shift+F5 exec --no-startup-id ibus engine xkb:fr:bepo:fra
