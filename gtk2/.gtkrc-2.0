@@ -1,6 +1,0 @@
-gtk-font-name = "Ubuntu 10"
-
-style "vimfix" {
-  bg[NORMAL] = "#002b36" # For dark solarized theme
-}
-widget "vim-main-window.*GtkForm" style "vimfix"
