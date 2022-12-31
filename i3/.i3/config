@@ -21,16 +21,16 @@ set $ws10 10:10
 font pango:Inconsolata LGC 9
 
 # Workspace settings
-workspace $ws1 output DVI-D-0
-workspace $ws2 output DVI-D-0
-workspace $ws3 output DVI-D-0
-workspace $ws4 output DVI-D-0
-workspace $ws5 output DVI-D-0
-workspace $ws6 output DisplayPort-1
-workspace $ws7 output DisplayPort-1
-workspace $ws8 output DisplayPort-1
-workspace $ws9 output DisplayPort-1
-workspace $ws10 output DisplayPort-1
+workspace $ws1 output DP-4
+workspace $ws2 output DP-4
+workspace $ws3 output DP-4
+workspace $ws4 output DP-4
+workspace $ws5 output HDMI-0
+workspace $ws6 output HDMI-0
+workspace $ws7 output HDMI-0
+workspace $ws8 output DP-0
+workspace $ws9 output DP-0
+workspace $ws10 output DP-0
 
 # Mouse
 mouse_warping none
@@ -206,7 +206,7 @@ bar {
         status_command i3blocks
         font pango:Inconsolata LGC, FontAwesome 9
 
-        tray_output DisplayPort-1
+        tray_output DP-4
         strip_workspace_numbers yes
 
         mode hide
