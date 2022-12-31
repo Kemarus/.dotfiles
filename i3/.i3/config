@@ -229,6 +229,7 @@ exec --no-startup-id numlockx
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id xset r rate 200 30
 exec --no-startup-id dunst
+exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper
 
 # Borders
 for_window [class="FTL"] border none, floating disable
