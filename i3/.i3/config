@@ -38,6 +38,7 @@ mouse_warping none
 # Borders
 new_window pixel 1
 hide_edge_borders both
+for_window [all] border pixel 1  # workaround for https://github.com/i3/i3/issues/5149
 
 #######################################################################
 # Bindings
