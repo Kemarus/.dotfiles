@@ -1,0 +1,11 @@
+[font.normal]
+family = "MesloLGS NF"
+
+[hints]
+enabled = []
+
+[scrolling]
+history = 10000
+
+[window]
+startup_mode = "Maximized"
