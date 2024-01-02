@@ -235,6 +235,7 @@ exec --no-startup-id feh --bg-fill ~/Pictures/wallpaper
 # Borders
 for_window [class="FTL"] border none, floating disable
 for_window [title="- - mpv"] border none
+for_window [class="vlc"] border none
 
 for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
