@@ -73,23 +73,6 @@ alias kgj="kubectl get jobs"
 alias kgjwide="kubectl get jobs --output wide"
 alias kgnowide="kubectl get nodes --output wide"
 
-alias pipin3="pip3 install --user"
-alias pipout3="pip3 list --outdated"
-pipupg3() {
-    list=($(pip3 list --outdated | awk '{print $1}'))
-    for package in "${list[@]}"; do
-        pip3 install --user --upgrade $package
-    done
-}
-alias pipin2="pip2 install --user"
-alias pipout2="pip2 list --outdated"
-pipupg2() {
-    list=($(pip2 list --outdated | awk '{print $1}'))
-    for package in "${list[@]}"; do
-        pip2 install --user --upgrade $package
-    done
-}
-
 pulseaudio_fix() {
     sudo sed -i 's/load-module module-udev-detect/load-module module-udev-detect tsched=0/' /etc/pulse/default.pa
     pulseaudio -k
